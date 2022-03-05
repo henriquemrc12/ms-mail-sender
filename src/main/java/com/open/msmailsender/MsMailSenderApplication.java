@@ -9,7 +9,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 public class MsMailSenderApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MsMailSenderApplication.class, args);
+		SpringApplication.un(MsMailSenderApplication.class, args);
 	}
 
 }
