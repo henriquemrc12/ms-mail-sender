@@ -1,3 +1,4 @@
+
 # Microservice for send Mail
 ## Requirements
 - JDK 11
@@ -7,7 +8,17 @@
 - Put email credentials in `application.properties`
 - Make sure your email provider is configured to accept SMTP connections. If not, configure in your email provider.
 
-## Run the project
+## Run the project with Docker
+
+```bash
+# Build
+docker build -t ms-mail-sender .
+
+# Run
+docker run -p 8080:8080 ms-mail-sender
+```
+
+## Run the project without Docker
 
 ```bash
 # Build the MS
@@ -22,15 +33,15 @@ java -jar target/ms-mail-sender-1.0.0.jar
 ### Body `POST /mail`
 ```json
 {
-    "to": "jhones@email.com",
-    "subject": "Hello Jhones!",
-    "content": "<h1>Welcome to the team!</h1>",
-    "cc": [
-      "carina@email.com",
-      "patrick@email.com"
-    ],
-    "isHtml": true,
-    "isAsync": false
+  "to": "jhones@email.com",
+  "subject": "Hello Jhones!",
+  "content": "<h1>Welcome to the team!</h1>",
+  "cc": [
+    "carina@email.com",
+    "patrick@email.com"
+  ],
+  "isHtml": true,
+  "isAsync": false
 }
 ```
 
