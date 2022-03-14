@@ -11,6 +11,9 @@
 ## Run the project with Docker
 
 ```bash
+# Build the MS
+mvn clean package
+
 # Build
 docker build -t ms-mail-sender .
 
@@ -25,7 +28,7 @@ docker run -p 8080:8080 ms-mail-sender
 mvn clean package
 
 #Start the MS
-java -jar target/ms-mail-sender-1.0.0.jar
+java -jar target/ms-mail-sender-1.0.2.jar
 ```
 
 ## Endpoint
